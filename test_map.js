@@ -4,7 +4,8 @@ d3.csv('https://raw.githubusercontent.com/zhyating/Interface/main/UP-eccentricit
         return rows.map(function(row) { return row[key]; });
     }
 
-    var scl = [[0,'rgb(5, 10, 172)'],[0.1,'rgb(40, 60, 190)'],[0.25,'rgb(70, 100, 245)'], [0.5,'rgb(90, 120, 245)'],[0.75,'rgb(106, 137, 247)'],[1,'rgb(220, 220, 220)']];
+    var scl = [[0, 'rgb(150,0,90)'],[0.125, 'rgb(0, 0, 200)'],[0.25,'rgb(0, 25, 255)'],[0.375,'rgb(0, 152, 255)'],
+    [0.5,'rgb(44, 255, 150)'],[0.625,'rgb(151, 255, 0)'],[0.75,'rgb(255, 234, 0)'],[0.875,'rgb(255, 111, 0)'],[1,'rgb(255, 0, 0)']];
 
     var data = [{
         type:'scattergeo',
