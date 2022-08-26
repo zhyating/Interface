@@ -1,4 +1,4 @@
-d3.csv('UP-eccentricity.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/zhyating/Interface/main/UP-eccentricity.csv', function(err, rows){
 
     function unpack(rows, key) {
         return rows.map(function(row) { return row[key]; });
@@ -15,13 +15,13 @@ d3.csv('UP-eccentricity.csv', function(err, rows){
         text:  unpack(rows, 'FRANODEID'),
         mode: 'markers',
         marker: {
-            size: 8,
+            size: 3,
             opacity: 0.8,
             reversescale: true,
             autocolorscale: false,
             symbol: 'square',
             line: {
-                width: 1,
+                width: 0.1,
                 color: 'rgb(102,102,102)'
             },
             colorscale: scl,
@@ -40,7 +40,7 @@ d3.csv('UP-eccentricity.csv', function(err, rows){
         autosize: false,
         width: 1500,
         height: 1500,
-        title: 'Eccentricity of nodes',
+        // title: 'Eccentricity of nodes',
         colorbar: true,
         geo: {
             scope: 'usa',
