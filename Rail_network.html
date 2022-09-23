@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+          <!-- Load plotly.js into the DOM -->
+          <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+          <script src='UP_layout.js'></script>
+          <script src='eccentricity.js'></script>
+          <script src='efficiency.js'></script>
+          <script src='table.js'></script>
+          <script src='table2.js'></script>
+          <script src='table_class1.js'></script>
+
+          <style>
+              p.ex1 {
+                margin: 30px 300px 30px 300px; // top, right, bottom, left
+              };
+          </style>
+
+    </head>
+
+   <body>
+     <h1>Rail Network Topological Analysis and Throughput Assessment (RailNTA)</h1>
+
+     <p> Team members: Bilal M. Ayyub; Yujie Mao; Sherief Elsibaie; Majed Hamed;
+       Magdy Elsibaie; Yating Zhang</p>
+
+     <h2>Our goals and objectives</h2>
+     <ul style="list-style-type:square">
+       <li>Implement and use a network analysis Python computer code, designed to
+         quantifying the topological connectedness efficiency of freight railroad
+         networks for resilience studies</li>
+       <li>Design the architecture of a Tool for Rail Network Topological Analysis
+         and Throughput Assessment (RailNTA)</li>
+       <li>Use aggregate network to illustrate the methodology and the tools, and
+         offer a proof of concept in coordination with FRA and industry partners</li>
+     </ul>
+
+     <h2>Terminoloy</h2>
+     <ul style="list-style-type:square">
+       <li>The <b>efficiency</b> of a node <i>i</i> characterizes how well products are transported by
+       its neighbors when <i>i</i> is removed.</li>
+       <li> The <b>eccentricity</b> of a node <i>i</i> is the maximum distance from <i>i</i>
+        to any other node. The reciprocal of eccentricity is an indicator for the
+        importance of a node within a network.</li>
+       <li></li>
+     </ul>
+
+     <!-- <img src="Picture2.png" alt="Tool architecture"> -->
+
+     <!-- <img src="Picture1.png" alt="Aggregate Typology by Owners"> -->
+     <h2>Case Study: Class 1 Railroads</h2>
+     <p class="ex1"> Zoom in to see the deatils of the railroad facilities.</p>
+     <div id='UP'></div>
+     <div id='table_class1'></div>
+
+    <!-- <p class="ex1"> .<br>.<br>.<br>.<br> </P> -->
+
+
+     <h2>Case Study: Union Pacific Railroads</h2>
+     <p class="ex1"> Union Pacific (UP) is the largest railroad in North America, covering 23 states
+       in the western two-thirds of the United States. The graph below shows
+        31,920 nodes within the network and node eccentricity values.
+       We are interested in the node(s) with the smallest eccentricity value because ...</p>
+     <div id='eccentricity'></div>
+     <div id='table'></div>
+
+
+     <p class="ex1"> The graph below shows node efficienecy values of the UP network.
+        We are interested in the node(s) with the
+       largest effeciency value because ... </p>
+     <div id='efficiency'></div>
+     <div id='table2'></div>
+
+     <h3>References</h3>
+     <p></p>
+   </body>
+
+</html>
