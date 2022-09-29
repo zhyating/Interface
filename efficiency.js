@@ -110,7 +110,6 @@ d3.csv('https://raw.githubusercontent.com/zhyating/Interface/main/UP-efficiency.
         margin: {t: 0, b: 0, l: 300, r: 300},
         updatemenus: updatemenus,
         annotations: annotations,
-        // title: '',
         colorbar: true,
         geo: {
             scope: 'usa',

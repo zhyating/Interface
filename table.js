@@ -13,12 +13,12 @@ d3.csv("https://raw.githubusercontent.com/zhyating/Interface/main/UP-eccentricit
       var ec_min = d3.min(data, function(d) { return d.ec; });
       var ec_max = d3.max(data, function(d) { return d.ec; });
 
-      var values = [['All','California'],
-                    [ec_mean,ec_mean],
-                    [ec_median,ec_median],
-                    [ec_sd,ec_sd],
-                    [1495,1495],
-                    [846,846]];
+      var values = [['All','County'],
+                    [ec_mean,'-'],
+                    [ec_median,'-'],
+                    [ec_sd,'-'],
+                    [1495,'-'],
+                    [846,'-']];
       var headerColor = "grey";
       var rowEvenColor = "lightgrey";
       var rowOddColor = "white";

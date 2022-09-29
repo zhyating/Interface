@@ -5,7 +5,7 @@
           <!-- Load plotly.js into the DOM -->
           <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-          <script src='UP_layout.js'></script>
+          <script src='Class1_layout.js'></script>
           <script src='eccentricity.js'></script>
           <script src='efficiency.js'></script>
           <script src='table.js'></script>
@@ -13,68 +13,127 @@
           <script src='table_class1.js'></script>
 
           <style>
-              p.ex1 {
+
+              h1 {
+                    font-size: 36px;
+                    margin: 30px 300px 30px 300px; // top, right, bottom, left
+                  }
+
+              h2 {
+                font-size: 28px;
                 margin: 30px 300px 30px 300px; // top, right, bottom, left
+              }
+
+              h3 {
+                font-size: 20px;
+                margin: 30px 300px 15px 300px; // top, right, bottom, left
+              }
+
+              p {
+                font-size: 16px;
+                margin: 30px 300px 30px 300px; // top, right, bottom, left
+                text-align: justify;
+                text-justify: inter-word;
+              }
+
+              ul {
+                list-style-type: none;
+                margin: 30px 310px 100px 260px; // top, right, bottom, left
+                padding: 0;
+                text-align: justify;
+                text-justify: inter-word;
               };
           </style>
 
     </head>
 
    <body>
-     <h1>Rail Network Topological Analysis and Throughput Assessment (RailNTA)</h1>
+     <h1 style="text-align:center">Rail Network Topological Analysis and Throughput Assessment (RailNTA)</h1>
 
-     <p> Team members: Bilal M. Ayyub; Yujie Mao; Sherief Elsibaie; Majed Hamed;
+     <p style="text-align:center"> Bilal M. Ayyub; Yujie Mao; Sherief Elsibaie; Majed Hamed;
        Magdy Elsibaie; Yating Zhang</p>
 
-     <h2>Our goals and objectives</h2>
-     <ul style="list-style-type:square">
-       <li>Implement and use a network analysis Python computer code, designed to
+     <p>The objectives of this projects are to (1) implement and use a network analysis Python computer code, designed to
          quantifying the topological connectedness efficiency of freight railroad
-         networks for resilience studies</li>
-       <li>Design the architecture of a Tool for Rail Network Topological Analysis
-         and Throughput Assessment (RailNTA)</li>
-       <li>Use aggregate network to illustrate the methodology and the tools, and
-         offer a proof of concept in coordination with FRA and industry partners</li>
-     </ul>
+         networks for resilience studies; (2) design the architecture of a Tool for Rail Network Topological Analysis
+         and Throughput Assessment (RailNTA) and; (3) use aggregate network to illustrate the methodology and the tools, and
+         offer a proof of concept in coordination with FRA and industry partners.</p>
 
-     <h2>Terminoloy</h2>
-     <ul style="list-style-type:square">
-       <li>The <b>efficiency</b> of a node <i>i</i> characterizes how well products are transported by
-       its neighbors when <i>i</i> is removed.</li>
-       <li> The <b>eccentricity</b> of a node <i>i</i> is the maximum distance from <i>i</i>
-        to any other node. The reciprocal of eccentricity is an indicator for the
-        importance of a node within a network.</li>
-       <li></li>
-     </ul>
+     <h3>Terminology</h3>
+     <ul>
+       <li><b>Node efficiency</b> of a node <i>i</i> characterizes how well products are transported by
+       its neighbors when <i>i</i> is removed. It is calculated as the average of all node pairwise efficiency
+        values between node <i>i</i> and other nodes.</li>
+       <li><b>Node eccentricity</b> of a node <i>i</i> is the maximum distance from <i>i</i>
+        to any other node. The reciprocal of eccentricity is an indicator for the importance of a node within a network.</li>
+       <li><b>Hazard</b> is a source of potential harm or a condition that may result from an external cause (e.g., earthquake,
+          flood, or human agency) or an internal vulnerability, with the potential to initiate a failure mode.</li>
+       <li><b>Fragility</b> is the conditional probability of failure at a particular hazard level.</li>
+       <li><b>Likelihood</b> is the chance of something happening, whether defined, measured, or determined objectively or subjectively,
+          qualitatively, or quantitatively, and described using general terms or mathematically, such as a probability or a
+           frequency over a given time period.</li>
+       <li><b>Probability</b> is a measure of chance of occurrence, likelihood, odds, or degree of belief that a particular outcome
+          or event will occur, expressed as a number between 0 and 1, where 0 is impossibility and 1 is absolute certainty.
+           This measure meets the axioms of probability theory. Probability has at least two primary interpretations: (1) a
+            frequency representing the occurrence fraction of an outcome in repeated trials or an experiment as sometimes termed
+             an objective probability and (2) subjective probability that is based on the state of knowledge.</li>
+       <li><b>Resilience</b> is defined by several sources as (1) the ability to adapt to changing conditions and withstand and rapidly
+          recover from disruption due to emergencies. (2) the ability to prepare for and adapt to changing conditions and to withstand
+           and recover rapidly from disruptions. Resilience includes the ability to withstand and recover from deliberate attacks,
+            accidents, or naturally occurring threats or incidents. (3) the persistence of a corresponding functional performance
+             under uncertainty in the face of disturbances. The third definition is consistent with the risk definition of the
+              “effect of uncertainty on objectives.”</li>
+       <li><b>Risk</b> should be associated with a system and is commonly defined as the potential loss resulting from an uncertain exposure
+          to a hazard or resulting from an uncertain event that exploits the system’s vulnerability. Risk should be based on identified
+           risk events or event scenarios. A broadly applicable definition of risk is defined as the effect of uncertainty on objectives
+            in order to cover the following considerations: (1) An effect is a deviation from the expected that can be positive and/or
+             negative effect. (2) Objectives can have different aspects, such as financial, health and safety, and environmental goals,
+              and can apply at different levels, such as strategic, organization-wide, project, product, and process. (3) Risk is often
+               expressed in terms of a combination of the consequences of an event, including changes in circumstances, and the associated
+                likelihood of occurrence as provided in the commonly used definition.</li>
+      <li><b>System</b> is a group of interacting, interrelated, or interdependent elements, such as people, property, materials, environment,
+         and processes.</li>
+  </ul>
 
      <!-- <img src="Picture2.png" alt="Tool architecture"> -->
 
      <!-- <img src="Picture1.png" alt="Aggregate Typology by Owners"> -->
-     <h2>Case Study: Class 1 Railroads</h2>
-     <p class="ex1"> Zoom in to see the deatils of the railroad facilities.</p>
+     <h2 style="text-align:center">Case Study: Class I Railroads</h2>
+     <p> In the United States, railroads are designated as Class I, Class II, or Class III, according to size criteria
+        first established by the Interstate Commerce Commission (ICC) in 1911, and now governed by the Surface
+         Transportation Board (STB). The STB's current definition of a Class I railroad is that any
+          carrier earns annual revenue greater than $250 million. This number should be adjusted for inflation and was most
+           recently set to $504,803,294 in 2019. Zoom in to see the deatils of the railroad facilities.</p>
      <div id='UP'></div>
      <div id='table_class1'></div>
 
     <!-- <p class="ex1"> .<br>.<br>.<br>.<br> </P> -->
 
 
-     <h2>Case Study: Union Pacific Railroads</h2>
-     <p class="ex1"> Union Pacific (UP) is the largest railroad in North America, covering 23 states
+     <h2 style="text-align:center">Case Study: Union Pacific Railroads</h2>
+     <p> Union Pacific (UP) is the largest railroad in North America, covering 23 states
        in the western two-thirds of the United States. The graph below shows
         31,920 nodes within the network and node eccentricity values.
-       We are interested in the node(s) with the smallest eccentricity value because ...</p>
+       We are interested in the node(s) with the smallest eccentricity value because those nodes are usually more central,
+         while nodes with higher eccentricity are usually more peripheral.</p>
      <div id='eccentricity'></div>
      <div id='table'></div>
 
 
-     <p class="ex1"> The graph below shows node efficienecy values of the UP network.
-        We are interested in the node(s) with the
-       largest effeciency value because ... </p>
+     <p> The graph below shows node efficienecy values of the UP network. We are interested in the node(s) with the
+     largest effeciency value because those nodes are able to reach all other nodes at a short
+      distance. Generally, more central nodes connected in a grid-like pattern
+       will have a greater node efficiency than those in long chains or at the periphery of a network.</p>
      <div id='efficiency'></div>
      <div id='table2'></div>
 
      <h3>References</h3>
-     <p></p>
+     <ul style="line-height:1.4;">
+       <li>Elsibaie, S., Mao, Y., Ayyub, B.M., and Elsibaie, M. (2022). Unweighted Rail Network Topological Analysis:
+     Efficiency And Eccentricity Network Report. Center for Technology and System Mangement (CTSM), University of Maryland,
+     College Park.</li>
+   </ul>
+
    </body>
 
 </html>

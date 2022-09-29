@@ -16,8 +16,8 @@ d3.csv("https://raw.githubusercontent.com/zhyating/Interface/main/UP-efficiency.
         var ef_sd = d3.deviation(data, function(d) { return d.ef; });
         ef_sd = Number(ef_sd).toFixed(6);
 
-        var values = [['All','California'], [ef_mean,ef_mean], [ef_median,ef_median],
-         [ef_sd,ef_sd], [ef_max,ef_max], [ef_min,ef_min]];
+        var values = [['All','County'], [ef_mean,'-'], [ef_median,'-'],
+         [ef_sd,'-'], [ef_max,'-'], [ef_min,'-']];
         var headerColor = "grey";
         var rowEvenColor = "lightgrey";
         var rowOddColor = "white";
